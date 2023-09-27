@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Support GUI</title>
+    <link rel="icon" href="amm.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="amm.jpg">
+    <link rel="stylesheet" href="pure-min.css">
+    <link rel="stylesheet" href="grids-responsive-min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="container">
+            <div class="pure-g">
+                <div class="pure-u-1-2" style="line-height:1; align-items: center; display: flex;">
+                    <img src="amm.jpg" class="icon">
+                    <center>
+                      <p><h2>PT ANTAREJA MAHADA MAKMUR</h2><p/>
+                      </center>
+                  </div>
+                  <div class="pure-u-1-2" style="text-align: right;">
+                    <a class="pure-button button-error button-small" href="/restart">Restart</a>
+                    <a class="pure-button button-error button-small" href="/logout">Sign Out</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <div class="container">
+                <div class="pure-g" style="text-align: center; display: block;">
+                    <a href="#" data-target="page-sensor"
+                    class="pure-button button-small nav-button pure-u-1-2 pure-u-md-1-8 active">
+                    <div class="box">
+                        <div class="title">Overview</div>
+                    </div>
+                </a>
+
+                <a href="#" data-target="page-parameters"
+                class="pure-button button-small nav-button pure-u-1-2 pure-u-md-1-8">
+                <div class="box">
+                    <div class="title">Download</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<section id="page-sensor" class="hide">
+    <div class="container">
+        <div class="pure-g">
+            <div class="pure-u-1-2 pure-u-md-1-3">
+                <div class="card">
+                    <div class="header">
+                        CN Unit
+                    </div>
+                    <div class="body">
+                        <h3 style="margin: 0;">~cn_unit~</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1-2 pure-u-md-1-3">
+                <div class="card">
+                    <div class="header">
+                        Longitude
+                    </div>
+                    <div class="body">
+                        <h3 style="margin: 0;">~longitude~</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1-2 pure-u-md-1-3">
+                <div class="card">
+                    <div class="header">
+                        Latitude
+                    </div>
+                    <div class="body">
+                        <h3 style="margin: 0;">~latitude~</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1-2 pure-u-md-1-3">
+                <div class="card">
+                    <div class="header">
+                        Serial Number
+                    </div>
+                    <div class="body">
+                        <h3 style="margin: 0;">~serial_number~</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1-2 pure-u-md-1-3">
+                <div class="card">
+                    <div class="header">
+                        IP Local
+                    </div>
+                    <div class="body">
+                        <h3 style="margin: 0;">~ip_local_client~</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1-2 pure-u-md-1-3">
+                <div class="card">
+                    <div class="header">
+                        RSSI
+                    </div>
+                    <div class="body">
+                        <h3 style="margin: 0;">~rssi_wifi~</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr style="margin: 1.2rem 6px; width: auto;" />
+
+        <div class="pure-g" style="margin-top: 14px;">
+            <div class="pure-u-1 pure-u-md-1-4">
+                <div class="pure-menu">
+                    <span class="pure-menu-heading">Setting</span>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item pure-menu-selected" data-target="page-sensor-general">
+                            <a href="#" class="pure-menu-link">General</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="page-sensor-container" class="pure-u-1 pure-u-md-3-4">
+                <div id="page-sensor-general" class="card hide">
+                    <div class="header">
+                        Unit Info
+                    </div>
+                    <div class="body">
+                        <form action="/get" class="pure-form pure-form-stacked">
+                            <hr>
+                            <label>CN Unit</label>
+                            <input class="pure-input-1" type="text" name="cn_unit" value="~cn_unit~" step="0.1"
+                            required />
+
+                            <label>Serial Number</label>
+                            <input class="pure-input-1" type="text" name="serial_number" value="~serial_number~" step="any"
+                            required />
+
+                            <hr>
+                            <div class="pure-g">
+                                <button type="reset"
+                                class="pure-u-1 pure-u-md-1-4 pure-button button-small">Discard</button>
+                                <div class="pure-u-1 pure-u-md-1-4"></div>
+                                <button type="submit"
+                                class="pure-u-1 pure-u-md-1-4 pure-button button-small button-success">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                    <hr>
+                    <div class="header">
+                        RTC Calibration
+                    </div>
+                    <div class="body">
+                        <form action="/get" class="pure-form pure-form-stacked">
+                            <hr>
+                            <label>Date</label>
+                            <input class="pure-input-1" type="date" name="set_date" value="~set_date~" step="any"
+                            required />
+
+                            <label>Time</label>
+                            <input class="pure-input-1" type="time" name="set_time" id="myTime" value="~set_time~" step="any"
+                            required />
+
+                            <hr>
+                            <div class="pure-g">
+                                <button type="reset"
+                                class="pure-u-1 pure-u-md-1-4 pure-button button-small">Discard</button>
+                                <div class="pure-u-1 pure-u-md-1-4"></div>
+                                <button type="submit"
+                                class="pure-u-1 pure-u-md-1-4 pure-button button-small button-success">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="page-parameters" class="hide">
+    <div class="pure-g" style="margin-top: px;">
+        <div class="pure-u-1 pure-u-md-1-7">
+            <center>
+              <p><b>Firmware:</b> ~version~</p>
+              <p><b>Free Storage:</b> <span id="freespiffs">~freespace~</span> | <b>Used Storage:</b> <span id="usedspiffs">~usedstorage~</span> | <b>Total Storage:</b> <span id="totalspiffs">~totalStorage~</span></p>
+              <p>
+                  <div class="pure-u-1-2" style="text-align: middle;">
+                    <a class="pure-button button-error button-small" onclick="listFilesButton()">Files Downloads</a>
+                </div>
+            </p>
+            <p id="status"></p>
+            <p id="detailsheader"></p>
+            <p id="details"></p>
+        </center>
+
+        <div id="page-parameters-container" class="pure-u-1 pure-u-md-3-4">
+            <div id="page-parameters-general" class="card hide"></div>
+        </div>
+    </div>
+</div>
+</section>
+
+<div class="footer">
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <p style="margin: 0; text-align: center;">
+                <MARQUEE onmouseout='this.start()' onmouseover='this.stop()' scrollamount='4'>&copy Copyright 2023 |
+                By PT ANTAREJA MAHADA MAKMUR</MARQUEE>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+   function myFunction() {
+       var x = document.getElementById("myTime").value;
+       document.getElementById("set_time").innerHTML = x;
+   }
+   function logoutButton() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "/logout", true);
+      xhr.send();
+      setTimeout(function(){ window.open("/logged-out","_self"); }, 1000);
+  }
+  function listFilesButton() {
+      xmlhttp=new XMLHttpRequest();
+      xmlhttp.open("GET", "/listfiles", false);
+      xmlhttp.send();
+      document.getElementById("detailsheader").innerHTML = "<h3>Files<h3>";
+      document.getElementById("details").innerHTML = xmlhttp.responseText;
+  }
+  function downloadDeleteButton(filename, action) {
+      var urltocall = "/file?name=" + filename + "&action=" + action;
+      xmlhttp=new XMLHttpRequest();
+      if (action == "delete") {
+        xmlhttp.open("GET", urltocall, false);
+        xmlhttp.send();
+        document.getElementById("status").innerHTML = xmlhttp.responseText;
+        xmlhttp.open("GET", "/listfiles", false);
+        xmlhttp.send();
+        document.getElementById("details").innerHTML = xmlhttp.responseText;
+    }
+    if (action == "download") {
+        document.getElementById("status").innerHTML = "";
+        window.open(urltocall,"_blank");
+    }
+}
+function showUploadButtonFancy() {
+  document.getElementById("detailsheader").innerHTML = "<h3>Upload File<h3>"
+  document.getElementById("status").innerHTML = "";
+  var uploadform = "<form method = \"POST\" action = \"/\" enctype=\"multipart/form-data\"><input type=\"file\" name=\"data\"/><input type=\"submit\" name=\"upload\" value=\"Upload\" title = \"Upload File\"></form>"
+  document.getElementById("details").innerHTML = uploadform;
+  var uploadform =
+  "<form id=\"upload_form\" enctype=\"multipart/form-data\" method=\"post\">" +
+  "<input type=\"file\" name=\"file1\" id=\"file1\" onchange=\"uploadFile()\"><br>" +
+  "<progress id=\"progressBar\" value=\"0\" max=\"100\" style=\"width:300px;\"></progress>" +
+  "<h3 id=\"status\"></h3>" +
+  "<p id=\"loaded_n_total\"></p>" +
+  "</form>";
+  document.getElementById("details").innerHTML = uploadform;
+}
+function _(el) {
+  return document.getElementById(el);
+}
+function progressHandler(event) {
+  //_("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total; // event.total doesnt show accurate total file size
+  _("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes";
+  var percent = (event.loaded / event.total) * 100;
+  _("progressBar").value = Math.round(percent);
+  _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
+  if (percent >= 100) {
+    _("status").innerHTML = "Please wait, writing file to filesystem";
+}
+}
+function completeHandler(event) {
+  _("status").innerHTML = "Upload Complete";
+  _("progressBar").value = 0;
+  xmlhttp=new XMLHttpRequest();
+  xmlhttp.open("GET", "/listfiles", false);
+  xmlhttp.send();
+  document.getElementById("status").innerHTML = "File Uploaded";
+  document.getElementById("detailsheader").innerHTML = "<h3>Files<h3>";
+  document.getElementById("details").innerHTML = xmlhttp.responseText;
+}
+function errorHandler(event) {
+  _("status").innerHTML = "Upload Failed";
+}
+function abortHandler(event) {
+  _("status").innerHTML = "inUpload Aborted";
+}
+</script>
+
+<script src="scripts.js"></script>
+
+</html>

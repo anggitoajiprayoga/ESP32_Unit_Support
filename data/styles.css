@@ -1,0 +1,211 @@
+body {
+    background-color: #ffffff;
+    padding-bottom: 2.6rem;
+}
+
+section {
+    padding: 2.2rem 0 1.2rem 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ebebed;
+    border-radius: 0;
+    margin: 1.2rem 0;
+}
+
+form label {
+    margin: 14px 0 6px 0 !important;
+}
+
+.container {
+    max-width: 924px;
+    margin: auto;
+    padding: 0px 12px;
+}
+
+.nav {
+    line-height: 1;
+    padding-top: 14px;
+    background: #ffffff;
+}
+
+.nav .icon {
+    display: inline;
+    margin-right: 55px;
+    height: 78px;
+}
+
+.nav .nav-item {
+    border-top: 2px solid #ebebed;
+    border-bottom: 2px solid #ebebed;
+    background: #fcfbfc;
+    margin-top: 14px;
+}
+
+/* here */
+.nav .nav-item .container .pure-g {
+    background-color: red;
+    border: 3px solid red;
+    border-radius: 100px;
+}
+
+.nav .nav-item .container .pure-g a {
+    color: white;
+
+}
+
+.pure-menu span {
+    background-color: red;
+    color: white;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.nav .nav-item .container .pure-g a:hover {
+    background-color: red;
+    border-radius: 50px;
+
+}
+
+.nav.nav-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+    padding-bottom: 0 !important;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 6px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.pure-button {
+    border-radius: 6px;
+}
+
+.button-success {
+    background: #CC0000;
+    /* this is a red */
+}
+
+.button-error {
+    background: rgb(202, 60, 60);
+    /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20);
+    /* this is an orange */
+}
+
+.button-secondary {
+    background: #00214c;
+    /* this is a light blue */
+}
+
+.button-xsmall {
+    font-size: 70%;
+}
+
+.button-small {
+    font-size: 85%;
+}
+
+.button-large {
+    font-size: 110%;
+}
+
+.button-xlarge {
+    font-size: 125%;
+}
+
+.button-round {
+    border-radius: 50% !important;
+}
+
+.nav-button {
+    padding: 0.7rem;
+    border-radius: 0;
+    background: none;
+    color: #afafaf;
+}
+
+.nav-button.active {
+    color: #00214c;
+    border-bottom: 2px solid;
+    margin-bottom: -2px;
+    font-weight: 600;
+}
+
+.card {
+    display: block;
+    width: auto;
+    border: 1px solid #ebebed;
+    padding: 1rem;
+    border-radius: 6px;
+    background: #fcfbfc;
+    color: #00214c;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 5px #0000001a;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.card .header,
+.card .footer {
+    font-size: 80%;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+}
+
+.card .header {
+    margin-bottom: 1rem;
+}
+
+.card .footer {
+    margin-top: 1rem;
+}
+
+.card .body {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.pure-menu-selected>.pure-menu-link,
+.pure-menu-selected>.pure-menu-link:visited {
+    color: #00214c;
+    font-weight: 600;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.footer {
+    padding: 0.3rem;
+    color: white;
+    background: red;
+    border-top: 1px solid #ebebed;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
